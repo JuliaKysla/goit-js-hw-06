@@ -3,14 +3,23 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 };
+
 console.log(getRandomHexColor());
 
 const bodyColorEl = document.querySelector(".widget").parentNode;
+
 console.log(bodyColorEl);
+
 const bodyspanColorEl = document.querySelector(".color");
 const buttonColorEl = document.querySelector(".change-color");
 
  const buttonChangeColor = buttonColorEl.addEventListener('click', (event) => {
-  bodyColorEl.style.backgroundColor = getRandomHexColor();
-  bodyspanColorEl.textContent = getRandomHexColor();
+  const color = getRandomHexColor();
+
+  bodyColorEl.style.backgroundColor = color;
+  bodyspanColorEl.textContent = color;
  });
+
+ 
+
+
